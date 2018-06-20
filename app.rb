@@ -1,4 +1,12 @@
+def compare_class?(a, b)
+    if a.is_a?(b.class) then
+        return true
+    end
+    false
+end
+
 def compare?(a, b)
+    unless compare_class?(a, b); return false; end
     if a == b then
         return true
     end
